@@ -1,0 +1,5 @@
+Tugasnya mengurutkan data menggunakan algoritma Selection Sort dalam bahasa pemrograman Java.
+Data awal = [20, 15, 90, 13, 26]
+Program harus menunjukkan proses pengurutan dari Iterasi 1 sampai Iterasi 4.
+Program melakukan beberapa iterasi untuk mencari nilai terkecil dari array yang belum terurut.
+Nilai terkecil tersebut ditukar (swap) dengan elemen di posisi awal.
