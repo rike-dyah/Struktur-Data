@@ -1,0 +1,40 @@
+public class UTSInsertionSort {
+    public static void main(String[] args){
+
+        String[] nama ={"Maya","Johanna","William","Daniel","Zoey",
+        "Jocelyn","Edward","Aria","Taylor","Lalisa"};
+        String[] npm = {"202519005","202519002","202519010","202519006",
+        "202519001","202519007","202519009","202519003","202519004",
+        "202519008"};
+        int[] nilai = {82,87,68,100,77,95,91,70,88,75};
+
+        //proses insertion sort
+        for(int i =1;i < nilai.length;i++) {
+            //ambil data yang akan disisipkan
+            int keyNilai = nilai[i];
+            String keyNama = nama[i];
+            String keyNpm = npm[i];
+            int j=i -1;
+
+            //geser elemen yang lebih kecil ke kanan untuk ruang bagi 'key'
+            while(j>=0 && nilai[j] < keyNilai) {
+                nilai[j+1] = nilai[j];
+                nama[j+1] = nama[j];
+                npm[j+1] = npm[j];
+                j=j-1;
+            }
+
+            //masukkan data
+            nilai[j+1] = keyNilai;
+            nama[j+1] = keyNama;
+            npm[j+1] = keyNpm;
+        }
+
+        //Output
+        System.out.println("Nama\t| NPM \t| Nilai");
+        System.out.println("------------------------------");
+        for(int i = 0;i < nilai.length;i++) {
+            System.out.println(nama[i] +"\t|" +npm[i] +"\t|" +nilai[i]);
+        }
+    } 
+}
