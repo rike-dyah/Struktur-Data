@@ -1,1 +1,34 @@
-cccc
+public class UTSBubbleSort {
+    public static void main(String[] args) {
+       
+        String[] nama ={"Maya","Johanna","William","Daniel","Zoey",
+        "Jocelyn","Edward","Aria","Taylor","Lalisa"};
+        String[] npm = {"202519005","202519002","202519010","202519006",
+        "202519001","202519007","202519009","202519003","202519004",
+        "202519008"};
+        int[] nilai = {82,87,68,100,77,95,91,70,88,75};
+
+        //Proses bubble sort
+        for(int i =0;i < nilai.length -1;i++) {
+            for(int j =0;j < nilai.length -i -1;j++) {
+                if(nilai[j] < nilai[j+1]) {  //descending
+
+                    //menukar nilai
+                    int tempNilai = nilai[j];
+                    nilai[j] = nilai[j+1];
+                    nilai[j+1] = tempNilai;
+
+                    //menukar nama
+                    String tempNpm = npm[j];
+                    npm[j] = npm[j+1];
+                    npm[j+1] =tempNpm;
+                }
+            }
+        }
+        //Output
+        System.out.println("Nama \t|NPM \t\t|Nilai");
+        for(int i =0;i < nilai.length;i++) {
+            System.out.println(nama[i] +"\t|" +npm[i] +"\t|" +nilai[i]);
+        }
+    }
+}
